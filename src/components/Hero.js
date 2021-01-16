@@ -22,11 +22,17 @@ const Hero = () => {
 		<header className="hero">
 			<div className="section-center hero-center">
 				<article className="hero-info">
-					<div>
+					<div className="console">
 						<div className="underline" />
-						<h1>hi, i am Sedki</h1>
-						<h4>full stack web developer</h4>
-						<Link to="/contact" className="btn">
+						<h1 className="line1 console_line">
+							<span>hi, i am sedki</span>
+							<span className="cursor1 cursor-type"> _</span>
+						</h1>
+
+						<h4 className="line2 console_line">
+							full stack web developer<span className="cursor2 cursor-type"> _</span>
+						</h4>
+						<Link to="/contact" className="btn pop-up">
 							Contact me
 						</Link>
 					</div>
