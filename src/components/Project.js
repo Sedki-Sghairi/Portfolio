@@ -6,7 +6,7 @@ const Project = ({ description, title, github, stack, url, image, index }) => {
 	return (
 		<article className="project">
 			<Image fluid={image.childImageSharp.fluid} className="project-img" />
-			<div className="project-info">
+			<div data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease-out-back" className="project-info">
 				<span className="project-number">0{index + 1}.</span>
 				<h3>{title}</h3>
 				<p className="project-desc">{description}</p>

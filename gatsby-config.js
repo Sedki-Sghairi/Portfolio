@@ -13,6 +13,7 @@ module.exports = {
 		`gatsby-plugin-sharp`,
 		`gatsby-plugin-react-helmet`,
 		`gatsby-plugin-sitemap`,
+		`gatsby-plugin-scroll-reveal`,
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
@@ -26,7 +27,6 @@ module.exports = {
 				apiURL: `http://localhost:1337`,
 				queryLimit: 1000, // Default to 100
 				contentTypes: [ `jobs`, `projects` ],
-				// , , `blogs`
 				singleType: `about`
 				// singleTypes: [],
 			}
