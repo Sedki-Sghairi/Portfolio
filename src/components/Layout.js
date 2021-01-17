@@ -9,6 +9,7 @@ const Layout = ({ children, light }) => {
     <>
       <Navbar light={light}/>
       {children}
+      <Footer/>
     </>
   )
 }

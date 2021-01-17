@@ -5,7 +5,7 @@ import { FaGithubSquare, FaShareSquare } from 'react-icons/fa';
 const Project = ({ description, title, github, stack, url, image, index }) => {
 	return (
 		<article className="project">
-			<Image fluid={image.childImageSharp.fluid} className="project-img" />
+			{image && <Image fluid={image.childImageSharp.fluid} className="project-img" />}
 			<div data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease-out-back" className="project-info">
 				<span className="project-number">0{index + 1}.</span>
 				<h3>{title}</h3>
@@ -16,13 +16,13 @@ const Project = ({ description, title, github, stack, url, image, index }) => {
 					})}
 				</div>
 				<div className="project-links">
-					<a href={github} target="_blank">
+					<a href={github} target="_blank" rel="noopener noreferrer">
 						<div className="padd">
 							<FaGithubSquare className="project-icon" />
 						</div>
 						<span className="project-icon-txt">Source-Code</span>
 					</a>
-					<a href={url} target="_blank">
+					<a href={url} target="_blank" rel="noopener noreferrer">
 						<div className="padd">
 							<FaShareSquare className="project-icon" />
 						</div>
@@ -34,6 +34,9 @@ const Project = ({ description, title, github, stack, url, image, index }) => {
 	);
 };
 
-Project.propTypes = {};
+Project.propTypes = {
+	url: PropTypes.string.isRequired,
+	image: PropTypes.object.isRequired
+};
 
 export default Project;
