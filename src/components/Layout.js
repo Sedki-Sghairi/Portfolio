@@ -3,10 +3,11 @@ import React from "react"
 import Navbar from "./Navbar"
 import Sidebar from "./Sidebar"
 import Footer from "./Footer"
-const Layout = ({ children }) => {
+const Layout = ({ children, light }) => {
+  
   return (
     <>
-      <Navbar/>
+      <Navbar light={light}/>
       {children}
     </>
   )

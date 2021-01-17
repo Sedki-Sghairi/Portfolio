@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../assets/log0.png';
 import { FaAlignRight } from 'react-icons/fa';
 import PageLinks from '../constants/links';
-const Navbar = () => {
+const Navbar = ({ light }) => {
 	return (
 		<nav className="navbar">
 			<div className="nav-center">
@@ -12,7 +12,7 @@ const Navbar = () => {
 						<FaAlignRight />
 					</button>
 				</div>
-				<PageLinks styleClass="nav-links" />
+				<PageLinks styleClass={`${light ? 'light-links' : ''} nav-links`} />
 			</div>
 		</nav>
 	);

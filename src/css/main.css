@@ -286,10 +286,10 @@ Navbar
 	.navbar {
 		background: transparent;
 	}
-	.nav-links a {
+	.light-links a {
 		color: rgb(179, 242, 255);
 	}
-	.nav-links a:hover {
+	.light-links a:hover {
 		color: rgb(220, 249, 255);
 		box-shadow: 0px 2px rgb(220, 249, 255);
 	}
@@ -770,12 +770,14 @@ Projects
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(to bottom right, var(--clr-primary-5), #222);
+	background: linear-gradient(to right, var(--clr-primary-5), #222);
 	opacity: 0.85;
-	transition: var(--transition);
+	transition: var(--l-transition);
 }
 .project:hover .project-img::after {
+	width: 0;
 	opacity: 0;
+	transition: all .5s ease-in;
 }
 .project-info {
 	background: var(--clr-white);
@@ -1009,6 +1011,7 @@ Pages
 .contact-page {
 	background: var(--clr-grey-10);
 	min-height: calc(100vh - 5rem - 9rem);
+	min-height: 100vh;
 }
 .error-page {
 	display: grid;

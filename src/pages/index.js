@@ -8,8 +8,9 @@ import Projects from '../components/Projects';
 import Blogs from '../components/Blogs';
 export default ({ data }) => {
 	const { allStrapiProjects: { nodes: projects } } = data;
+
 	return (
-		<Layout>
+		<Layout light="true">
 			<Hero />
 			<Services />
 			<Jobs />
