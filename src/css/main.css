@@ -23,7 +23,7 @@ Variables
 	/* lighter shades of primary color */
 	--clr-primary-6: hsl(185, 57%, 50%);
 	--clr-primary-7: hsl(184, 65%, 59%);
-	--clr-primary-8: hsl(184, 80%, 74%);
+	--clr-primary-8: hsl(184, 98%, 65%);
 	--clr-primary-9: hsl(185, 94%, 87%);
 	--clr-primary-10: hsl(199, 91%, 91%);
 	/* darkest grey - used for headings */
@@ -31,7 +31,7 @@ Variables
 	--clr-grey-3: hsl(209, 34%, 30%);
 	--clr-grey-4: hsl(209, 28%, 39%);
 	/* grey used for paragraphs */
-	--clr-grey-5: hsl(210, 22%, 49%);
+	--clr-grey-5: hsl(209, 26%, 64%);
 	--clr-grey-8: hsl(210, 31%, 80%);
 	--clr-grey-9: hsl(212, 33%, 89%);
 	--clr-grey-10: hsl(210, 36%, 96%);
@@ -190,11 +190,23 @@ p {
 }
 .social-link {
 	font-size: 1.75rem;
-	color: var(--clr-grey-1);
+	color: var(--clr-primary-6);
+	opacity: .5;
 	transition: var(--transition);
+	animation: glow 2s 6s ease forwards;
+}
+
+@keyframes glow {
+	0% {
+		opacity: .3;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 .social-link:hover {
-	color: var(--clr-primary-5);
+	font-size: 1.75rem;
+	color: var(--clr-white);
 }
 /*
 =============== 
@@ -224,7 +236,8 @@ Navbar
 	align-items: center;
 }
 .nav-header img {
-	margin-bottom: 0.375rem;
+	height: 70px;
+	border-radius: .5rem;
 }
 .toggle-btn {
 	font-size: 2rem;
@@ -253,15 +266,14 @@ Navbar
 	}
 	.nav-links a {
 		text-transform: capitalize;
-		color: var(--clr-grey-1);
-		font-weight: bold;
+		color: rgb(6, 41, 48);
+		font-weight: bolder;
 		letter-spacing: var(--spacing);
 		transition: var(--transition);
 		padding: 0.5rem 0;
 	}
 	.nav-links a:hover {
-		color: var(--clr-primary-5);
-		box-shadow: 0px 2px var(--clr-primary-5);
+		box-shadow: 0px 2px rgb(6, 41, 48);
 	}
 	.nav-center {
 		display: grid;
@@ -273,6 +285,13 @@ Navbar
 @media screen and (min-width: 992px) {
 	.navbar {
 		background: transparent;
+	}
+	.nav-links a {
+		color: rgb(179, 242, 255);
+	}
+	.nav-links a:hover {
+		color: rgb(220, 249, 255);
+		box-shadow: 0px 2px rgb(220, 249, 255);
 	}
 }
 /*
@@ -404,7 +423,7 @@ Hero
 	margin-top: -5rem;
 	padding-top: 5rem;
 	height: 100vh;
-	background: var(--clr-primary-10);
+	background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(3, 3, 15, 1) 25%, rgba(0, 212, 255, 1) 100%);
 	position: relative;
 }
 
@@ -419,10 +438,13 @@ Hero
 	margin-left: 0;
 }
 .hero-info {
-	background: var(--clr-primary-10);
+	background-color: transparent;
 }
 .hero-img {
 	display: none;
+}
+.line1 {
+	color: #fff;
 }
 .hero-info h4 {
 	color: var(--clr-grey-5);
@@ -448,17 +470,17 @@ Hero
 }
 
 .line2 {
-	-webkit-animation: type 3s 4s steps(101) forwards;
-	-moz-animation: type 3s 4s steps(103) forwards;
-	-o-animation: type 3s 4s steps(101) forwards;
-	animation: type 3s 4s steps(101) forwards;
+	-webkit-animation: type 3s 3s steps(101) forwards;
+	-moz-animation: type 3s 3s steps(103) forwards;
+	-o-animation: type 3s 3s steps(101) forwards;
+	animation: type 3s 3s steps(101) forwards;
 }
 
 .cursor1 {
-	-webkit-animation: blink 1s 1.5s 2 forwards;
-	-moz-animation: blink 1s 1.5s 2 forwards;
-	-o-animation: blink 1s 1.5s 2 forwards;
-	animation: blink 1s 1.5s 2 forwards;
+	-webkit-animation: blink .8s 1s 2 forwards;
+	-moz-animation: blink .8s 1s 2 forwards;
+	-o-animation: blink .8s 1s 2 forwards;
+	animation: blink .8s 1s 2 forwards;
 }
 
 .cursor2 {
@@ -539,7 +561,7 @@ Hero
 		left: 65%;
 		right: 0;
 		bottom: 0;
-		background: var(--clr-white);
+		background: linear-gradient(center, rgb(2, 111, 133) 0%, rgb(229, 249, 253) 100%);
 	}
 	.hero-center {
 		grid-template-columns: repeat(12, 1fr);
@@ -556,6 +578,8 @@ Hero
 		display: block;
 		grid-row: 1/1;
 		grid-column: 6/-1;
+		border-radius: .8rem;
+		box-shadow: var(--dark-shadow), var(--light-shadow);
 	}
 }
 @media screen and (min-width: 1170px) {
@@ -653,17 +677,23 @@ Jobs
 	cursor: pointer;
 	padding: 0.25rem 0;
 	line-height: 1;
+	outline: 0;
 }
+
 .job-btn:hover {
 	color: var(--clr-primary-5);
 	box-shadow: 0 2px var(--clr-primary-5);
 }
+.job-btn:focus {
+	font-weight: bold;
+}
+
 .active-btn {
 	color: var(--clr-primary-5);
 	box-shadow: 0 2px var(--clr-primary-5);
 }
 .job-info {
-	/* min-height: 420px; */
+	min-height: 320px;
 }
 .job-info h3 {
 	font-weight: 400;
@@ -777,6 +807,7 @@ Projects
 	background: var(--clr-grey-9);
 	color: var(--clr-grey-5);
 	margin-right: 0.5rem;
+	margin-bottom: .5rem;
 	padding: 0.25rem 0.5rem;
 	border-radius: var(--radius);
 	text-transform: uppercase;

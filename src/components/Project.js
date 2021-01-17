@@ -16,13 +16,13 @@ const Project = ({ description, title, github, stack, url, image, index }) => {
 					})}
 				</div>
 				<div className="project-links">
-					<a href={github}>
+					<a href={github} target="_blank">
 						<div className="padd">
 							<FaGithubSquare className="project-icon" />
 						</div>
 						<span className="project-icon-txt">Source-Code</span>
 					</a>
-					<a href={url}>
+					<a href={url} target="_blank">
 						<div className="padd">
 							<FaShareSquare className="project-icon" />
 						</div>
