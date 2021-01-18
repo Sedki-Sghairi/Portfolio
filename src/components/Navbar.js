@@ -7,7 +7,13 @@ const Navbar = ({ light, toggle }) => {
 		<nav className="navbar">
 			<div className="nav-center">
 				<div className="nav-header">
-					<img src={logo} alt="logo" />
+					<img
+						src={logo}
+						alt="logo"
+						data-sal="slide-right"
+						data-sal-duration="400"
+						data-sal-easing="easeOutQuart"
+					/>
 					<button type="button" className="toggle-btn" onClick={toggle}>
 						<FaAlignRight />
 					</button>

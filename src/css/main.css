@@ -496,21 +496,8 @@ Hero
 	background: var(--clr-primary-0);
 	margin-left: auto;
 	margin-right: auto;
-	opacity: 0;
-	animation: pop-up 1.5s ease 5.9s forwards;
 }
-.pop-up {
-	opacity: 0;
-	animation: pop-up 1.5s ease 5.9s forwards;
-}
-@keyframes pop-up {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
+
 @keyframes blink {
 	0% {
 		opacity: 0;
@@ -942,7 +929,6 @@ Pages
 .contact-page {
 	background: var(--clr-grey-10);
 	min-height: calc(100vh - 5rem - 9rem);
-	min-height: 100vh;
 }
 .error-page {
 	display: grid;
@@ -962,11 +948,11 @@ About Page
 ===============
 */
 .about-page {
-	padding: 7rem 0;
+	padding: 1rem 0;
 }
 .about-img {
 	margin-bottom: 2rem;
-	height: 25rem;
+	width: 100%;
 }
 .about-text .section-title {
 	margin-bottom: 2rem;
@@ -976,8 +962,13 @@ About Page
 	margin-left: 0;
 	margin-right: 0;
 }
+.about-text .section-title {
+	color: rgb(73, 105, 153);
+}
 .about-text p {
 	line-height: 2;
+	font-size: 1.2rem;
+	margin-top: -1rem;
 }
 .stack-container {
 	width: 30rem;
@@ -997,21 +988,7 @@ About Page
 	margin-right: 0.25rem;
 	font-size: 1rem;
 }
-@media screen and (min-width: 992px) {
-	.about-center {
-		display: grid;
-		grid-template-columns: repeat(12, 1fr);
-		align-items: center;
-		column-gap: 4rem;
-	}
-	.about-img {
-		grid-column: 1 / span 5;
-		margin-bottom: 0;
-	}
-	.about-text {
-		grid-column: 6 / -1;
-	}
-}
+
 /*
 ===============
 Contact Page
