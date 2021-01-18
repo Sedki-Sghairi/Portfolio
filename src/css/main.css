@@ -3,7 +3,7 @@
 Fonts
 ===============
 */
-/* @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap"); */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
 
 /*
 =============== 
@@ -89,7 +89,7 @@ h4 {
 	font-family: var(--ff-primary);
 }
 h1 {
-	font-size: 3rem;
+	font-size: 2.5rem;
 }
 h2 {
 	font-size: 2rem;
@@ -191,11 +191,12 @@ p {
 .social-link {
 	font-size: 1.75rem;
 	color: var(--clr-primary-6);
-	opacity: .5;
 	transition: var(--transition);
-	animation: glow 2s 6s ease forwards;
 }
-
+.hero .social-link {
+	opacity: .3;
+	animation: glow 2s 5.6s ease forwards;
+}
 @keyframes glow {
 	0% {
 		opacity: .3;
@@ -433,10 +434,6 @@ Hero
 	align-items: center;
 }
 
-.hero .underline {
-	margin-bottom: 0.5rem;
-	margin-left: 0;
-}
 .hero-info {
 	background-color: transparent;
 }
@@ -454,8 +451,17 @@ Hero
 }
 .hero .btn {
 	margin-top: 1.25rem;
+	animation: popup 2s 5.6s ease forwards;
+	opacity: 0;
 }
-
+@keyframes popup {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
 .console_line {
 	white-space: nowrap;
 	overflow: hidden !important;
@@ -477,17 +483,17 @@ Hero
 }
 
 .cursor1 {
-	-webkit-animation: blink .8s 1s 2 forwards;
-	-moz-animation: blink .8s 1s 2 forwards;
-	-o-animation: blink .8s 1s 2 forwards;
-	animation: blink .8s 1s 2 forwards;
+	-webkit-animation: blink 1s 1s 2 forwards;
+	-moz-animation: blink 1s 1s 2 forwards;
+	-o-animation: blink 1s 1s 2 forwards;
+	animation: blink 1s 1s 2 forwards;
 }
 
 .cursor2 {
-	-webkit-animation: blink 1s 4.5s 2 forwards;
-	-moz-animation: blink 1s 4.5s 2 forwards;
-	-o-animation: blink 1s 4.5s 2 forwards;
-	animation: blink 1s 4.5s 2 forwards;
+	-webkit-animation: blink 1s 3.5s 2 forwards;
+	-moz-animation: blink 1s 3.5s 2 forwards;
+	-o-animation: blink 1s 3.5s 2 forwards;
+	animation: blink 1s 3.5s 2 forwards;
 }
 .underline {
 	width: 5rem;
@@ -793,8 +799,8 @@ Projects
 .project-stack span,
 .about-stack span {
 	display: inline-block;
-	background: var(--clr-grey-9);
-	color: var(--clr-grey-5);
+	background: var(--clr-grey-8);
+	color: black;
 	margin-right: 0.5rem;
 	margin-bottom: .5rem;
 	padding: 0.25rem 0.5rem;
@@ -888,7 +894,6 @@ Footer
 .footer {
 	height: 9rem;
 	background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(3, 3, 15, 1) 35%, rgba(0, 212, 255, 1) 100%);
-
 	text-align: center;
 	display: grid;
 	place-items: center;
@@ -922,12 +927,19 @@ Footer
 Pages
 ===============
 */
-
+.contact-page,
 .projects-page,
 .error-page,
-.about-page,
+.about-page {
+	min-height: calc(100vh - 5rem - 9rem);
+}
+
+.about-page {
+	background: #1d2424;
+}
 .contact-page {
-	background: var(--clr-grey-10);
+	background: linear-gradient(90deg, #1678 0%, rgba(0, 0, 0, .1) 50%, #99c7b6 100%);
+
 	min-height: calc(100vh - 5rem - 9rem);
 }
 .error-page {
@@ -966,9 +978,10 @@ About Page
 	color: rgb(73, 105, 153);
 }
 .about-text p {
-	line-height: 2;
-	font-size: 1.2rem;
+	line-height: 1.5;
+	font-size: 1.3rem;
 	margin-top: -1rem;
+	color: var(--clr-white);
 }
 .stack-container {
 	width: 30rem;
@@ -1037,10 +1050,13 @@ Contact Page
 }
 .submit-btn {
 	display: block;
-	width: 100%;
-	padding: 1rem;
-	border-bottom-left-radius: var(--radius);
-	border-bottom-right-radius: var(--radius);
-	border-top-right-radius: 0;
-	border-top-left-radius: 0;
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: .5rem;
+	padding: .8rem;
+	border-radius: var(--radius);
+}
+.submit-btn:hover {
+	background: hsl(202, 83%, 37%);
+	color: var(--clr-white);
 }

@@ -23,9 +23,8 @@ const Hero = () => {
 			<div className="section-center hero-center">
 				<article className="hero-info">
 					<div className="console">
-						{/* <div className="underline" /> */}
 						<h1 className="line1 console_line">
-							<span>hi, i am sedki</span>
+							<span>sedki sghairi</span>
 							<span className="cursor1 cursor-type"> _</span>
 						</h1>
 
