@@ -5,18 +5,18 @@ export default [
 		id: 1,
 		icon: <FaCode className="service-icon" />,
 		title: 'web development',
-		text: `I'm baby meditation tofu chillwave, distillery messenger bag thundercats chicharrones kale chips gochujang. Banh mi direct trade marfa salvia.`
+		text: `Buil responsive websites, fully functional, hight performing and secure for both frontend and backend.`
 	},
 	{
 		id: 2,
 		icon: <FaSketch className="service-icon" />,
 		title: 'web design',
-		text: `I'm baby meditation tofu chillwave, distillery messenger bag thundercats chicharrones kale chips gochujang. Banh mi direct trade marfa salvia.`
+		text: `Explore various ways to engage visitors, creating the style and tone that will give your site a unique personality.`
 	},
 	{
 		id: 3,
 		icon: <FaAndroid className="service-icon" />,
 		title: 'mobile app development',
-		text: `I'm baby meditation tofu chillwave, distillery messenger bag thundercats chicharrones kale chips gochujang. Banh mi direct trade marfa salvia.`
+		text: `Cross-platform mobile development, using React-native for both fast app launch and cost-efficiency.`
 	}
 ];

@@ -1,7 +1,7 @@
 import React from 'react';
 import Title from './Title';
 import services from '../constants/services';
-// import { FaFontAwesomeLogoFull } from 'react-icons/fa';
+
 const Services = () => {
 	return (
 		<section className="section bg-grey">
