@@ -27,7 +27,7 @@ const Jobs = () => {
 	const { company, position, date, desc } = jobs[value];
 	return (
 		<section className="section jobs">
-			<Title title="expierence" />
+			<Title title="certifications" />
 			<div className="jobs-center">
 				{/* btn container */}
 				<div className="btn-container">
@@ -52,7 +52,9 @@ const Jobs = () => {
 						return (
 							<div key={item.id} className="job-desc">
 								<FaAngleDoubleRight className="job-icon" />
-								<p>{item.name}</p>
+								<a href={item.name} target="_blank" rel="noopener noreferrer">
+									View certificate
+								</a>
 							</div>
 						);
 					})}

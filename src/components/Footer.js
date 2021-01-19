@@ -13,6 +13,10 @@ const Footer = () => {
 							{' '}
 							Gatsby
 						</a>
+						&amp;
+						<a href="https://strapi.io/" target="_blank" rel="noopener noreferrer">
+							Strapi
+						</a>
 					</p>
 				</h4>
 			</div>

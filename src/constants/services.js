@@ -5,7 +5,7 @@ export default [
 		id: 1,
 		icon: <FaCode className="service-icon" />,
 		title: 'web development',
-		text: `Buil responsive websites, fully functional, hight performing and secure for both frontend and backend.`
+		text: `Build responsive websites, fully functional, hight performing and secure for both frontend and backend.`
 	},
 	{
 		id: 2,
