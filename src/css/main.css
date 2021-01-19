@@ -752,8 +752,17 @@ Jobs
 Projects
 ===============
 */
+.home-btn,
 .projects {
 	background: var(--clr-grey-10);
+}
+.home-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.home-btn a {
+	margin-bottom: 3rem;
 }
 .project {
 	display: grid;
