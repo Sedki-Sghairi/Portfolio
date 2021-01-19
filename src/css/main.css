@@ -42,7 +42,9 @@
 Global Styles
 ===============
 */
-
+html {
+	font-size: 90%;
+}
 *,
 ::after,
 ::before {
@@ -213,6 +215,7 @@ Navbar
 	z-index: 200;
 	background: var(--clr-white);
 }
+
 .nav-center {
 	width: 90vw;
 	max-width: 1170px;
@@ -288,7 +291,9 @@ Sidebar
 ===============
 */
 .sidebar {
-	background: var(--clr-grey-10);
+	/* background: var(--clr-grey-10); */
+	background: linear-gradient(to top, #116677 0%, #000 50%, #99c7b6 100%);
+
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -330,8 +335,13 @@ Sidebar
 	font-size: 2.5rem;
 	background: transparent;
 	border-color: transparent;
-	color: var(--clr-red-dark);
+	color: var(--clr-primary-9);
 	cursor: pointer;
+	transition: var(--l-transition);
+}
+.close-btn:hover {
+	color: rgb(49, 36, 36);
+	transform: rotate(30deg);
 }
 @media screen and (min-width: 992px) {
 	.sidebar {
@@ -419,10 +429,13 @@ Hero
 	height: 100%;
 	display: grid;
 	align-items: center;
+	/* justify-content: center; */
 }
 
 .hero-info {
 	background-color: transparent;
+	max-width: 600px;
+	padding-left: 2rem;
 }
 .hero-img {
 	display: none;
@@ -558,12 +571,15 @@ Hero
 		grid-row: 1/1;
 		grid-column: 1 / span 8;
 	}
+
 	.hero-img {
 		display: block;
 		grid-row: 1/1;
 		grid-column: 6/-1;
 		border-radius: .8rem;
 		box-shadow: var(--dark-shadow), var(--light-shadow);
+		max-width: 80%;
+		margin: 2rem 0 0 7rem;
 	}
 }
 @media screen and (min-width: 1170px) {
@@ -954,6 +970,10 @@ About Page
 */
 .about-page {
 	padding: 1rem 0;
+}
+.move {
+	max-width: 800px;
+	margin: 0 auto;
 }
 .about-img {
 	margin-bottom: 2rem;

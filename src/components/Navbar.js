@@ -8,6 +8,7 @@ const Navbar = ({ light, toggle }) => {
 			<div className="nav-center">
 				<div className="nav-header">
 					<img
+						style={{ height: 60 }}
 						src={logo}
 						alt="logo"
 						data-sal="slide-right"

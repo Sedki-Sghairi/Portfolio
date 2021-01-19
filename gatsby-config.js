@@ -6,7 +6,8 @@
 
 module.exports = {
 	siteMetadata: {
-		title: 'Portfolio'
+		title: 'Portfolio',
+		siteUrl: 'http://localhost:8000/'
 	},
 	plugins: [
 		`gatsby-transformer-sharp`,
