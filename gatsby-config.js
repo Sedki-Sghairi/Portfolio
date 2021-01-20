@@ -6,8 +6,12 @@
 
 module.exports = {
 	siteMetadata: {
-		title: 'Portfolio',
-		siteUrl: 'http://localhost:8000/'
+		title: 'Sedki Sghairi',
+		description: 'Web developer portfolio',
+		author: 'sedki',
+		twitterUsername: '@SedkiSghairi',
+		image: '/hero.JPG',
+		siteUrl: 'https://sedkisghairi.netlify.app'
 	},
 	plugins: [
 		`gatsby-transformer-sharp`,

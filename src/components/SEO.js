@@ -1,9 +1,30 @@
-import React from "react"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import { useStaticQuery, graphql } from 'gatsby';
 
-const SEO = () => {
-  return <div>SEO Component</div>
-}
+const query = graphql`
+	{
+		site {
+			siteMetadata {
+				author
+				siteDescription: description
+				image
+				siteUrl
+				siteTitle: title
+				twitterUsername
+			}
+		}
+	}
+`;
 
-export default SEO
+const SEO = ({ title, description }) => {
+	const { site } = useStaticQuery(query);
+	const { author, siteDescription, image, siteTitle, twitterUsername } = site.siteMetadata;
+	return (
+		<Helmet htmlAttributes={{ lang: 'en' }} title={`${title} | ${siteTitle}`}>
+			<meta name="description" content={description || siteDescription} />
+		</Helmet>
+	);
+};
+
+export default SEO;
