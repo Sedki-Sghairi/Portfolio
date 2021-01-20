@@ -12,7 +12,7 @@ export default ({ data }) => {
 
 	return (
 		<Layout light="true">
-			<SEO title="Home" />
+			<SEO title="Home" description="this is the Home page" />
 			<Hero />
 			<Services />
 			<Jobs />

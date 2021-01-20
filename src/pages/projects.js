@@ -2,10 +2,12 @@ import React from 'react';
 import Layout from '../components/Layout';
 import { graphql, Link } from 'gatsby';
 import Projects from '../components/Projects';
+import SEO from '../components/SEO';
 
 const ProjectsPage = ({ data: { allStrapiProjects: { nodes: projects } } }) => {
 	return (
 		<Layout>
+			<SEO title="Projects" description="this is the projects page" />
 			<section className="projects-page">
 				<Projects projects={projects} title="my recent projects" />
 				<div className="home-btn">

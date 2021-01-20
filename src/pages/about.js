@@ -3,10 +3,13 @@ import Layout from '../components/Layout';
 import { graphql } from 'gatsby';
 import Title from '../components/Title';
 import Image from 'gatsby-image';
+import SEO from '../components/SEO';
+
 const About = ({ data: { allStrapiAbout: { nodes } } }) => {
 	const { title, image, stack, info } = nodes[0];
 	return (
 		<Layout>
+			<SEO title="About" description="this is the about page" />
 			<section className="about-page">
 				<div className="section-center about-center">
 					<div

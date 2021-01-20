@@ -7,7 +7,7 @@
 module.exports = {
 	siteMetadata: {
 		title: 'Sedki Sghairi',
-		description: 'Web developer portfolio',
+		description: 'This is the portfolio of a web developer',
 		author: 'sedki',
 		twitterUsername: '@SedkiSghairi',
 		image: '/hero.JPG',
