@@ -1,16 +1,10 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
 module.exports = {
 	siteMetadata: {
 		title: 'Sedki',
 		description: 'Full stack web development, Portfolio',
-		author: 'sedki',
+		author: '@SedkiSghairi',
 		twitterUsername: '@SedkiSghairi',
-		image: '/hero.JPG',
+		image: '/sedki.png',
 		siteUrl: 'https://sedkisghairi.netlify.app'
 	},
 	plugins: [
