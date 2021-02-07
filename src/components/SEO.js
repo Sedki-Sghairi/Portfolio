@@ -33,7 +33,7 @@ const SEO = ({ title, description }) => {
 			<meta name="twitter:image" content={`${siteUrl}${image}`} />
 			<meta
 				name="keywords"
-				content="Web Developer,Frontend,Front-End,Back-End,Backend,Full-Stack,Mobile Development,App Development,App Developer,Web Design,Web Designer,React Developer,JS Developer,JavaScript Developer,React-native Developer,Web Dev"
+				content="Sedki Sghairi,Dubai Web Developer,Web Development Dubai,Web Developer,Frontend,Front-End,Back-End,Backend,Full-Stack,Mobile Development,App Development,App Developer,Web Design,Web Designer,React Developer,JS Developer,JavaScript Developer,React-native Developer,Web Dev"
 			/>
 		</Helmet>
 	);
