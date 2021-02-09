@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/log0.png';
+import logo from '../assets/log0.webp';
 import { FaAlignRight } from 'react-icons/fa';
 import PageLinks from '../constants/links';
 import { Link } from 'gatsby';
