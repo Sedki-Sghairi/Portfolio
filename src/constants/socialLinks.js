@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLinkedin, FaTwitterSquare, FaBlogger, FaGithubSquare } from 'react-icons/fa';
+import { FaLinkedin, FaTwitterSquare, FaBlogger, FaGithubSquare, FaStackOverflow } from 'react-icons/fa';
 
 const data = [
 	{
@@ -21,6 +21,11 @@ const data = [
 		id: 4,
 		icon: <FaBlogger className="social-icon" />,
 		url: 'https://sedki.medium.com/'
+	},
+	{
+		id: 6,
+		icon: <FaStackOverflow className="social-icon" />,
+		url: 'https://stackoverflow.com/u/15120820'
 	}
 ];
 const links = data.map((link) => {
