@@ -694,6 +694,10 @@ Jobs
 }
 .job-info {
 	min-height: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 .job-info h3 {
 	font-weight: 400;
@@ -714,7 +718,7 @@ Jobs
 .job-desc {
 	display: grid;
 	grid-template-columns: auto 1fr;
-	column-gap: 2rem;
+	column-gap: .5rem;
 	align-items: center;
 	margin-bottom: 1.25rem;
 }
@@ -724,27 +728,6 @@ Jobs
 }
 .job-icon {
 	color: var(--clr-primary-5);
-}
-@media screen and (min-width: 992px) {
-	.jobs-center {
-		width: 90vw;
-		display: grid;
-		grid-template-columns: 200px 1fr;
-		column-gap: 4rem;
-	}
-	.btn-container {
-		flex-direction: column;
-		justify-content: flex-start;
-	}
-	.job-btn {
-		margin-bottom: 1rem;
-	}
-	.active-btn {
-		box-shadow: -2px 0 var(--clr-primary-5);
-	}
-	.job-btn:hover {
-		box-shadow: -2px 0 var(--clr-primary-5);
-	}
 }
 
 /*
