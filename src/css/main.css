@@ -665,6 +665,7 @@ Jobs
 	flex-direction: row;
 	justify-content: center;
 	margin-bottom: 4rem;
+	flex-wrap: wrap;
 }
 .job-btn {
 	background: transparent;
@@ -672,12 +673,13 @@ Jobs
 	text-transform: capitalize;
 	font-size: 1.25rem;
 	letter-spacing: var(--spacing);
-	margin: 0 0.5rem;
+	margin: 1rem 0.5rem;
 	transition: var(--transition);
 	cursor: pointer;
 	padding: 0.25rem 0;
 	line-height: 1;
 	outline: 0;
+	min-width: 5rem;
 }
 
 .job-btn:hover {
